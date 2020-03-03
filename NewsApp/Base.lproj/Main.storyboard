@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,10 +50,28 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="vk7-NA-GQT"/>
+                    <connections>
+                        <segue destination="6CY-1q-8Iv" kind="show" identifier="goToOneNews" id="IbD-s9-VbA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95e-wx-32r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="655" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sjG-pB-qK9">
+            <objects>
+                <viewController id="6CY-1q-8Iv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xlD-WQ-pWk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6m4-Dr-vg5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jL3-oX-XkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="126"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LDF-Ha-fmE">
