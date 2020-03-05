@@ -33,9 +33,10 @@ class TableViewController: UITableViewController {
         return articles.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseId", for: indexPath)
+        
+        cell.textLabel?.numberOfLines = 7
         
         let article = articles[indexPath.row]
         
@@ -44,6 +45,8 @@ class TableViewController: UITableViewController {
         
         return cell
     }
+    
+
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goToOneNews", sender: self)

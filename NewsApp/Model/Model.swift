@@ -39,7 +39,7 @@ func parseNews() {
     let rootDictonaryAny = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, Any>
     if rootDictonaryAny == nil { return }
     
-    let rootDictonary = rootDictonaryAny as? Dictionary<String, Any>
+    let rootDictonary = rootDictonaryAny
     if rootDictonary == nil { return }
     
     if let array = rootDictonary!["articles"] as? [Dictionary<String, Any>] {
@@ -52,5 +52,5 @@ func parseNews() {
         }
         articles = returnArray
     }
-    }
+}
 

@@ -18,13 +18,17 @@ class OneNewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         labelTitle.text = article.title
-        labelDescription.text = article.desription
+        labelDescription.text = article.description
+        
+        DispatchQueue.main.async {
+            if let url = URL(string: self.article.urlToImage) {
+                if let data = try? Data(contentsOf: url) {
+                    self.imageView.image = UIImage(data: data)
+                }
+            }
+        }
         
     }
-    
-
-
-
 }

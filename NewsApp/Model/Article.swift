@@ -11,7 +11,7 @@ import Foundation
 struct Article {
     var author: String
     var title: String
-    var desription: String
+    var description: String
     var url: String
     var urlToImage: String
     var publishedAt: String
@@ -20,7 +20,7 @@ struct Article {
     init(dictonary: Dictionary<String, Any>) {
         author = dictonary["author"] as? String ?? ""
         title = dictonary["title"] as? String ?? ""
-        desription = dictonary["desription"] as? String ?? ""
+        description = dictonary["description"] as? String ?? ""
         url = dictonary["url"] as? String ?? ""
         urlToImage = dictonary["urlToImage"] as? String ?? ""
         publishedAt = dictonary["publishedAt"] as? String ?? ""
