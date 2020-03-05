@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		992586CC240FE85B00816F7C /* OneNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992586CB240FE85B00816F7C /* OneNewsViewController.swift */; };
 		99D94E40240A7A7D007D64A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D94E3F240A7A7D007D64A6 /* AppDelegate.swift */; };
 		99D94E45240A7A7E007D64A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99D94E43240A7A7E007D64A6 /* Main.storyboard */; };
 		99D94E47240A7A81007D64A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99D94E46240A7A81007D64A6 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		992586CB240FE85B00816F7C /* OneNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneNewsViewController.swift; sourceTree = "<group>"; };
 		99D94E3C240A7A7D007D64A6 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99D94E3F240A7A7D007D64A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99D94E44240A7A7E007D64A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				99D94E3F240A7A7D007D64A6 /* AppDelegate.swift */,
 				99F2DE55240E86F600AA18FE /* TableViewController.swift */,
+				992586CB240FE85B00816F7C /* OneNewsViewController.swift */,
 				99D94E53240A7B0E007D64A6 /* Model */,
 				99D94E43240A7A7E007D64A6 /* Main.storyboard */,
 				99D94E46240A7A81007D64A6 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992586CC240FE85B00816F7C /* OneNewsViewController.swift in Sources */,
 				99D94E40240A7A7D007D64A6 /* AppDelegate.swift in Sources */,
 				99D94E52240A7B08007D64A6 /* Article.swift in Sources */,
 				99F2DE54240E675F00AA18FE /* Model.swift in Sources */,
