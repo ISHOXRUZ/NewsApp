@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class OneNewsViewController: UIViewController {
     
@@ -15,6 +16,14 @@ class OneNewsViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelDescription: UILabel!
+    
+    @IBOutlet weak var openSafari: UIButton!
+    @IBAction func openSafariAction(_ sender: Any) {
+        if let url = URL(string: article.url) {
+            let svc = SFSafariViewController(url: url)
+            present(svc, animated: true, completion: nil)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +37,11 @@ class OneNewsViewController: UIViewController {
                     self.imageView.image = UIImage(data: data)
                 }
             }
+        }
+        
+        if URL(string: article.url) == nil {
+            // Skrivaem knopku
+            openSafari.isEnabled = true
         }
         
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mst-Rk-6xb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7dv-Wf-cki">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -94,12 +94,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ciu-uy-a41">
+                                <rect key="frame" x="116.5" y="451" width="181" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Open in Safari"/>
+                                <connections>
+                                    <action selector="openSafariAction:" destination="6CY-1q-8Iv" eventType="touchUpInside" id="wCW-eX-zeJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cq9-EM-2w0" firstAttribute="top" secondItem="CvE-IF-VmY" secondAttribute="bottom" constant="19.5" id="24q-zV-7Si"/>
                             <constraint firstItem="CvE-IF-VmY" firstAttribute="top" secondItem="tK4-GM-s9h" secondAttribute="bottom" constant="20" id="5pz-dv-ytO"/>
                             <constraint firstItem="6m4-Dr-vg5" firstAttribute="trailing" secondItem="cq9-EM-2w0" secondAttribute="trailing" constant="15" id="9jj-kD-uMT"/>
+                            <constraint firstItem="Ciu-uy-a41" firstAttribute="centerY" secondItem="6m4-Dr-vg5" secondAttribute="centerY" id="Fko-vr-MMl"/>
+                            <constraint firstItem="Ciu-uy-a41" firstAttribute="centerX" secondItem="6m4-Dr-vg5" secondAttribute="centerX" id="P6a-pR-6Wr"/>
                             <constraint firstItem="CvE-IF-VmY" firstAttribute="leading" secondItem="6m4-Dr-vg5" secondAttribute="leading" constant="15" id="Qdj-YF-n2F"/>
                             <constraint firstItem="tK4-GM-s9h" firstAttribute="trailing" secondItem="6m4-Dr-vg5" secondAttribute="trailing" id="Xsm-Tv-0Bd"/>
                             <constraint firstItem="cq9-EM-2w0" firstAttribute="leading" secondItem="6m4-Dr-vg5" secondAttribute="leading" constant="15" id="dMc-j7-W8T"/>
@@ -113,11 +123,20 @@
                         <outlet property="imageView" destination="tK4-GM-s9h" id="moM-Ru-pEq"/>
                         <outlet property="labelDescription" destination="cq9-EM-2w0" id="pIf-4f-zYI"/>
                         <outlet property="labelTitle" destination="CvE-IF-VmY" id="zCe-bn-Tjr"/>
+                        <outlet property="openSafari" destination="Ciu-uy-a41" id="Fuq-hC-Dyc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jL3-oX-XkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1437.68115942029" y="125.89285714285714"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="ZGD-wG-lTP">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="7dv-Wf-cki" customClass="PageViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PW6-A7-LF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="805"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LDF-Ha-fmE">
