@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7dv-Wf-cki">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cki-j5-AID">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -56,12 +56,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95e-wx-32r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="655" y="126"/>
+            <point key="canvasLocation" x="1563.768115942029" y="125.89285714285714"/>
         </scene>
         <!--One News View Controller-->
         <scene sceneID="sjG-pB-qK9">
             <objects>
-                <viewController id="6CY-1q-8Iv" customClass="OneNewsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="oneNewsSID" id="6CY-1q-8Iv" customClass="OneNewsViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xlD-WQ-pWk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,13 +71,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tK4-GM-s9h">
-                                <rect key="frame" x="0.0" y="88" width="414" height="184"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="240"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="zbZ-Ku-JLY"/>
+                                    <constraint firstAttribute="height" constant="240" id="zbZ-Ku-JLY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvE-IF-VmY">
-                                <rect key="frame" x="15" y="292" width="384" height="30"/>
+                                <rect key="frame" x="15" y="348" width="384" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="1f1-fK-sur"/>
                                 </constraints>
@@ -86,7 +86,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq9-EM-2w0">
-                                <rect key="frame" x="15" y="341.5" width="384" height="50"/>
+                                <rect key="frame" x="15" y="397.5" width="384" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7YZ-Zo-xXT"/>
                                 </constraints>
@@ -95,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ciu-uy-a41">
-                                <rect key="frame" x="116.5" y="451" width="181" height="48"/>
+                                <rect key="frame" x="116.5" y="426.5" width="181" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Open in Safari"/>
                                 <connections>
@@ -128,20 +128,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jL3-oX-XkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437.68115942029" y="125.89285714285714"/>
+            <point key="canvasLocation" x="2347.826086956522" y="125.89285714285714"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="ZGD-wG-lTP">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="7dv-Wf-cki" customClass="PageViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="7dv-Wf-cki" customClass="PageViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SKg-XC-pcR"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PW6-A7-LF0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="805"/>
+            <point key="canvasLocation" x="1564" y="850"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="LDF-Ha-fmE">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mst-Rk-6xb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="lgF-mP-Py0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OqK-Sr-y0J">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -154,7 +157,44 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOs-uX-PxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="126"/>
+            <point key="canvasLocation" x="868.11594202898561" y="125.89285714285714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="MJf-51-VWg">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cki-j5-AID" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p5i-7c-DcU">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Mst-Rk-6xb" kind="relationship" relationship="viewControllers" id="eND-6V-T0r"/>
+                        <segue destination="SkB-AX-Nsz" kind="relationship" relationship="viewControllers" id="hMw-p4-RnT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NS1-Ok-Zww" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="161" y="126"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="dpi-tT-Q5j">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SkB-AX-Nsz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="V8Y-AT-lAT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oG4-30-oni">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7dv-Wf-cki" kind="relationship" relationship="rootViewController" id="ns9-f1-Dgn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vaE-Ws-IIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="850"/>
         </scene>
     </scenes>
 </document>

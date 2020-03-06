@@ -11,6 +11,8 @@ import SafariServices
 
 class OneNewsViewController: UIViewController {
     
+    var index: Int = 0
+    
     var article: Article!
     
     @IBOutlet weak var imageView: UIImageView!
