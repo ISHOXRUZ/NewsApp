@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+/*
 class PageViewController: UIPageViewController, UIPageViewControllerDataSource{
 
     override func viewDidLoad() {
@@ -55,3 +55,4 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource{
         return vc
     }
 }
+*/

@@ -8,7 +8,28 @@
 
 import Foundation
 
-var articles: [Article] = []
+var articles: [Article] {
+    let data = try? Data(contentsOf: urlToData)
+    if data == nil { return [] }
+    
+    let rootDictonaryAny = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, Any>
+    if rootDictonaryAny == nil { return [] }
+    
+    let rootDictonary = rootDictonaryAny
+    if rootDictonary == nil { return [] }
+    
+    if let array = rootDictonary!["articles"] as? [Dictionary<String, Any>] {
+        
+        var returnArray: [Article] = []
+        
+        for dict in array {
+            let newArticle = Article(dictonary: dict)
+            returnArray.append(newArticle)
+        }
+        return returnArray
+    }
+    return []
+}
 
 var urlToData: URL {
     let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]+"/data.json"
@@ -24,33 +45,9 @@ func loadNews(completionHandler: (() -> Void)?) {
     let downloadTask = session.downloadTask(with: url!) { (urlFile, responce, error) in
         if urlFile != nil {
             try? FileManager.default.copyItem(at: urlFile!, to: urlToData)
-            parseNews()
             completionHandler?()
             
         }
     }
     downloadTask.resume()
 }
-
-func parseNews() {
-    let data = try? Data(contentsOf: urlToData)
-    if data == nil { return }
-    
-    let rootDictonaryAny = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! Dictionary<String, Any>
-    if rootDictonaryAny == nil { return }
-    
-    let rootDictonary = rootDictonaryAny
-    if rootDictonary == nil { return }
-    
-    if let array = rootDictonary!["articles"] as? [Dictionary<String, Any>] {
-        
-        var returnArray: [Article] = []
-        
-        for dict in array {
-            let newArticle = Article(dictonary: dict)
-            returnArray.append(newArticle)
-        }
-        articles = returnArray
-    }
-}
-
